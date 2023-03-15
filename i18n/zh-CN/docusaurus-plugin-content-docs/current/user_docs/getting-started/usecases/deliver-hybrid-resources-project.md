@@ -85,7 +85,7 @@ wordpress = frontend.Server {
 更多有关Konfig模型的详细信息请查看 [Konfig 模型介绍](https://github.com/KusionStack/konfig)。
 :::
 
-### 部署 WordPress 及关联 OSS Bucket
+## 部署 WordPress 及关联 OSS Bucket
 
 接下来我们将 WordPress 站点一键部署到 Kubernetes 集群，同时创建所需的 OSS bucket：
 
@@ -114,7 +114,7 @@ Forwarding from [::1]:12345 -> 80
 
 接着在浏览器中访问 [http://localhost:12345](http://localhost:12345)，以使用 WordPress 站点。
 
-### 验证并配置 OSS 作为 WordPress 的云端存储
+## 验证并配置 OSS 作为 WordPress 的云端存储
 
 接下来我们验证 WordPress 站点的服务，及其依赖的 OSS 资源创建情况。首先需要完成 WordPress 的安装和登录，并在 WordPress 的侧边栏进入`插件`设置，单击`安装插件`，搜索并安装 “Aliyun OSS” 插件。
 
