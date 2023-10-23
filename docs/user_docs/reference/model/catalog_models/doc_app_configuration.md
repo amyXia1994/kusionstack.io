@@ -8,18 +8,30 @@ sidebar_position: 1
 
 ## Schema AppConfiguration
 
-AppConfiguration is a developer-centric definition that describes how to run an Application.<br />This application model builds upon a decade of experience at AntGroup running super large scale<br />internal developer platform, combined with best-of-breed ideas and practices from the community.
+AppConfiguration is a developer-centric definition that describes how to run an Application.<br />This application model builds upon a decade of experience at AntGroup running super large scale internal developer platform, combined with best-of-breed ideas and practices from the community.
 
 ### Attributes
 
-|Name and Description|Type|Default Value|Required|
-|--------------------|----|-------------|--------|
-|**workload**<br />Workload defines how to run your application code. Currently supported workload profile<br />includes Service and Job.|[workload.Service](workload/doc_service.md#schema-service) \| [workload.Job](workload/doc_job.md#schema-job)|Undefined|**required**|
-|**opsRule**<br />OpsRule specifies collection of rules that will be checked for Day-2 operation.|[trait.OpsRule](trait/doc_opsrule.md#schema-opsrule)|Undefined|optional|
-|**database**|[database.Database](database/doc_database.md#schema-database)|Undefined|optional|
-|**monitoring**|[monitoring.Prometheus](monitoring/doc_prometheus.md#schema-prometheus)|Undefined|optional|
-|**labels**|{str: str}|Undefined|optional|
-|**annotations**|{str: str}|Undefined|optional|
+#### <span style="color: #2471A3;">workload: [Service](workload/doc_job.md#schema-job) \| [Job](workload/doc_job.md#schema-job)</span>
+<span style="color: #7B241C;">required</span> 
+Workload defines how to run your application code. Currently supported workload profile includes Service and Job.
+<details><summary>Service</summary>这里是要折叠的内容。</details>
+<details><summary>Job</summary>这里是要折叠的内容。</details>
+
+#### <span style="color: #2471A3;">opsRule: [trait.OpsRule](trait/doc_opsrule.md#schema-opsrule)</span>
+<span style="color: #626567;">optional</span>
+OpsRule specifies collection of rules that will be checked for Day-2 operation.<details><summary>OpsRule</summary>这里是要折叠的内容。</details>
+
+#### <span style="color: #2471A3;">database: [Database](trait/doc_opsrule.md#schema-opsrule)</span> 
+<span style="color: #626567;">optional</span> 
+<details><summary>Database</summary>这里是要折叠的内容。</details>
+
+#### <span style="color: #2471A3;">labels: {str: str}</span>
+<span style="color: #626567;">optional</span> 
+
+#### <span style="color: #2471A3;">annotations: {str: str}</span>
+<span style="color: #626567;">optional</span> 
+
 ### Examples
 ```python
 # Instantiate an App with a long-running service and its image is "nginx:v1"
